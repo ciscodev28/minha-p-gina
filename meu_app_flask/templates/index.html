@@ -3,13 +3,16 @@
 <head>
 
     <title>Página Inicial</title>
-    <link rel="icon" href="{{ url_for('favicon') }}">
-
+    <link rel="icon" type = "imagem/png" href="{{url_for('static', filename='icons8-internet-100.png')}}">
 </head>
 <body>
     <h1>Bem-vindo à Página Inicial! 🏡</h1>
     <a href="/sobre">
         Ir para a página Sobre
+    </a>
+
+    <a href="/calculadora">
+        Ir para a página da calculadora
     </a>
 </body>
 </html>
