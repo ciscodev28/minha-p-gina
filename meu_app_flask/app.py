@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -10,9 +11,13 @@ def home():
 def sobre():
     return render_template('sobre.html')
 
-@app.route('/favicon.ico')
-def favicon():
-    return app.send_static_file('favicon.ico')
+@app.route('/calculadora')
+def calculadora():
+    return render_template('calculadora.html')
+
+@app.route('/resultado')
+def resultado():
+    return render_template('resultado.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
