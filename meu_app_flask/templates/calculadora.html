@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons8-internet-100.png') }}">
 
-    <title>calculadora </title>
+    <title>Calculadora </title>
 </head>
 <body>
-    <a href="/resultato">
-        Confira o resultado
-    </a>
+        <form action="/resultado" method="POST">
+
+        <label>Primeiro Número</label>
+        <input type="number" name="numero1" step="any" required>
+
+        <br>
+
+        <label>Segundo Número</label>
+        <input type="number" name="numero2" step="any" required>
+
+        <br>
+
+        <label>Escolha a operação:</label>
+
+        <select name="operacao">
+            <option value="soma">
+                Adição(+)
+            </option>
+
+            <option value="subtração">
+                Subtração(-)
+            </option>
+
+            <option value="multiplicação">
+                Multiplicação(x)
+            </option>
+
+            <option value="divisão">
+                Divisão(/)
+            </option>
+        </select>
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
 </body>
 </html>
